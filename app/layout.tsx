@@ -16,9 +16,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aishruth Pradeep Tavane | AI Systems Engineer",
-  description: "AI Systems Engineer. Final-year BNM Institute of Technology CS (GPA 8.95). Digital twins, generative AI, agentic AI, ML, full-stack. FastAPI, AWS, Java, React, Docker/K8s, Prometheus/Grafana. Bengaluru.",
+  title: "Aishruth Pradeep Tavane - AI Systems Engineer",
+  description: "B.E. CS (GPA 8.95) | Cardiac Digital Twins (CVAE), Kubernetes Dashboards, AI Stock Predictor | FastAPI - React - Docker - ML",
   keywords: ["Aishruth Tavane", "AI", "Automation", "Digital Twins", "ML", "Full-Stack", "DevOps", "K8s", "Bengaluru"],
+
+  openGraph: {
+    title: "Aishruth Pradeep Tavane - AI Systems Portfolio",
+    description: "Production systems: cardiac digital twins, K8s automation portals, generative AI, full-stack development.",
+    url: "https://aishruth-portfolio.vercel.app",
+    siteName: "AishruthX Portfolio",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Aishruth Pradeep Tavane - AI Systems Engineer",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aishruth Pradeep Tavane - AI Systems Engineer",
+    description: "Cardiac digital twins - K8s automation - AI stock prediction - FastAPI/React/Docker.",
+    images: ["/og-image.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
