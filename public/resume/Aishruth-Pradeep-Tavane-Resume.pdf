@@ -1,0 +1,103 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 1 /Kids [3 0 R] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 750 >>
+stream
+BT
+/F1 12 Tf
+50 750 Td
+(Aishruth Pradeep Tavane) Tj
+50 730 Td
+(aishruthx@gmail.com  |  +91-8050054808  |  Bengaluru, KA  |  https://github.com/Aishucodes) Tj
+50 700 Td
+(EXPERIENCE) Tj
+50 680 Td
+(Neweee Data Analytics              July 2025–January 2025) Tj
+50 660 Td
+(Software Development Intern — On-Site) Tj
+50 640 Td
+(Collaborated with the Algorithm team to refactor and optimize core code,) Tj
+50 620 Td
+(which significantly improved processing speed and overall system efficiency) Tj
+50 600 Td
+(by 23% using multithreading for Scheduling.) Tj
+50 580 Td
+(Created a Namespace management portal so that the DevOps team could automate) Tj
+50 560 Td
+(Kubernetes lifecycle operations on Google Kubernetes Engine (GKE),) Tj
+50 540 Td
+(reducing a complex, command-line process for the DevOps team into a) Tj
+50 520 Td
+(single-click action.) Tj
+50 500 Td
+(Stack: Python, Flask, HTML, CSS, JavaScript, Machine Learning) Tj
+50 470 Td
+(EDUCATION) Tj
+50 450 Td
+(BNM Institute of Technology                       July, 2026) Tj
+50 430 Td
+(Computer Science Engineering (B.E)) Tj
+50 410 Td
+(GPA: 8.95) Tj
+50 390 Td
+(Bangalore International Academy                 March, 2022) Tj
+50 370 Td
+(CBSE, Class 12 — 84%) Tj
+50 350 Td
+(Innisfree House School                         May, 2020) Tj
+50 330 Td
+(ICSE, Class 10 — 95%) Tj
+50 300 Td
+(PROJECT EXPERIENCE) Tj
+50 280 Td
+(AI-Powered Financial Analysis and Predictor Dashboard       Oct. 2024 – Dec. 2024) Tj
+50 260 Td
+(Developed a Flask Web Application which analyzed and predicted) Tj
+50 240 Td
+(the stock price for the input ticker symbol.) Tj
+50 220 Td
+(Real-time stock analysis with Yahoo Finance API, VADER & NewsAPI,) Tj
+50 200 Td
+(indicators (SMA, RSI, MACD), and risk metrics (Sharpe ratio, beta, VaR)) Tj
+50 180 Td
+(Interactive candlestick charts with buy/sell signals using Plotly) Tj
+50 160 Td
+(and 5-day price predictions via a Linear Regression ML model.) Tj
+50 130 Td
+(Discord Bot for Emotion-Driven Sentiment Analysis             May, 2024 – July, 2024) Tj
+50 110 Td
+(Created a Python Discord bot using VADER Sentiment Analyzer to detect) Tj
+50 90 Td
+(and respond to user emotions like happiness, sadness, anger, anxiety.) Tj
+50 70 Td
+(Delivered tailored messages with media (e.g., cute images) for) Tj
+50 50 Td
+(enhanced emotional support and engagement.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000053 00000 n 
+0000000100 00000 n 
+0000000300 00000 n 
+0000000450 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+670
+%%EOF
