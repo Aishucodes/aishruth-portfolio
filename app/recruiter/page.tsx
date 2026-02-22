@@ -101,7 +101,7 @@ export default function RecruiterPage() {
               Aishruth Pradeep Tavane
             </span>
           </h1>
-          <p className="text-lg text-gray-400 mb-1">AI Systems Engineer</p>
+          <p className="text-lg text-gray-400 mb-1">Curious. Technical. Driven.</p>
           <p className="text-sm text-gray-500 mb-4">Bengaluru | B.E. CS (GPA 8.95)</p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
             <a href="mailto:aishruthx@gmail.com" className="flex items-center gap-1 hover:text-blue-400 transition-colors">

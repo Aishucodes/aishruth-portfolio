@@ -103,7 +103,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-2 text-xl text-gray-300 md:text-2xl"
           >
-            AI Systems Engineer
+            Curious. Technical. Driven.
           </motion.p>
 
           <motion.p
