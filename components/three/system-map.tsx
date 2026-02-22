@@ -104,9 +104,11 @@ function Connection({ from, to }: { from: SystemNode; to: SystemNode }) {
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
-          count={2}
           array={new Float32Array(points.flat())}
+          count={2}
           itemSize={3}
+          // args added for TypeScript compliance
+          args={[new Float32Array(points.flat()), 3]}
         />
       </bufferGeometry>
       <lineBasicMaterial color="#0AF" transparent opacity={0.5} linewidth={1} />
