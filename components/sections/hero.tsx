@@ -54,7 +54,7 @@ export function Hero() {
       </div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0B0F19]/80 via-[#0B0F19]/60 to-[#0B0F19]/90" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0B0F19]/70 via-[#0B0F19]/50 to-[#0B0F19]/80" />
 
       {/* Content */}
       <div className="relative z-20 flex h-full flex-col items-center justify-center px-4 text-center">
@@ -90,7 +90,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-6 text-6xl font-bold tracking-tight md:text-7xl lg:text-8xl"
+            className="mb-4 text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl"
           >
             <span className="bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent">
               Aishruth Pradeep Tavane
@@ -101,16 +101,25 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-2 text-xl text-gray-300 md:text-2xl"
+            className="mb-2 text-xl text-gray-200 md:text-2xl font-semibold"
           >
-            Curious. Technical. Driven.
+            Neewee Software Development Intern
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mb-4 text-lg text-gray-300 md:text-xl"
+          >
+            Application System Analyst Intern @ Koch
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-12 max-w-2xl mx-auto text-lg text-gray-400 md:text-xl"
+            className="mb-12 max-w-2xl mx-auto text-base text-gray-400 md:text-lg"
           >
             Bengaluru | B.E. CS (GPA 8.95)
           </motion.p>

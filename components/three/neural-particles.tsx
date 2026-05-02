@@ -79,7 +79,7 @@ export function NeuralParticles({ count = 2000, mouse = { x: 0, y: 0 } }: Partic
   )
 }
 
-// Connection lines between nearby particles
+// Connection lines between nearby particles (optimized with spatial partitioning)
 export function NeuralConnections({ particles, mouse }: { particles: Float32Array; mouse: { x: number; y: number } }) {
   const lineRef = useRef<THREE.LineSegments>(null)
 
@@ -89,25 +89,57 @@ export function NeuralConnections({ particles, mouse }: { particles: Float32Arra
     const positions = particles
     const connections: number[] = []
     const maxDistance = 2
+    const gridSize = 3 // Spatial grid cell size
+    const spatialHash = new Map<string, number[]>()
 
-    for (let i = 0; i < particles.length / 3 - 1; i++) {
+    // Build spatial hash grid
+    for (let i = 0; i < positions.length / 3; i++) {
+      const i3 = i * 3
+      const x = Math.floor(positions[i3] / gridSize)
+      const y = Math.floor(positions[i3 + 1] / gridSize)
+      const z = Math.floor(positions[i3 + 2] / gridSize)
+      const key = `${x},${y},${z}`
+
+      if (!spatialHash.has(key)) {
+        spatialHash.set(key, [])
+      }
+      spatialHash.get(key)!.push(i)
+    }
+
+    // Check only nearby cells for connections
+    for (let i = 0; i < positions.length / 3; i++) {
       const i3 = i * 3
       const x1 = positions[i3]
       const y1 = positions[i3 + 1]
       const z1 = positions[i3 + 2]
+      const gx = Math.floor(x1 / gridSize)
+      const gy = Math.floor(y1 / gridSize)
+      const gz = Math.floor(z1 / gridSize)
 
-      for (let j = i + 1; j < particles.length / 3; j++) {
-        const j3 = j * 3
-        const x2 = positions[j3]
-        const y2 = positions[j3 + 1]
-        const z2 = positions[j3 + 2]
+      // Check only adjacent cells
+      for (let dx = -1; dx <= 1; dx++) {
+        for (let dy = -1; dy <= 1; dy++) {
+          for (let dz = -1; dz <= 1; dz++) {
+            const key = `${gx + dx},${gy + dy},${gz + dz}`
+            const cellIndices = spatialHash.get(key)
+            if (!cellIndices) continue
 
-        const distance = Math.sqrt(
-          (x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2
-        )
+            for (const j of cellIndices) {
+              if (j <= i) continue // Avoid duplicate connections
+              const j3 = j * 3
+              const x2 = positions[j3]
+              const y2 = positions[j3 + 1]
+              const z2 = positions[j3 + 2]
 
-        if (distance < maxDistance) {
-          connections.push(x1, y1, z1, x2, y2, z2)
+              const distance = Math.sqrt(
+                (x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2
+              )
+
+              if (distance < maxDistance) {
+                connections.push(x1, y1, z1, x2, y2, z2)
+              }
+            }
+          }
         }
       }
     }
